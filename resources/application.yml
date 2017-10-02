@@ -1,0 +1,35 @@
+server:
+  port: 8080
+  context-path: /SpringBootCRUDApp
+---
+datasource:
+  balafharapp:
+    defaultSchema: public
+    driverClassName: org.postgresql.Driver
+    hibernate:
+      dialect: org.hibernate.dialect.PostgreSQL94Dialect
+      format_sql: true
+      hbm2ddl.method: create-drop
+      show_sql: true
+    maxPoolSize: 10
+    password: topgear3000
+    url: "jdbc:postgresql://localhost:5432/apisys"
+    username: postgres
+spring:
+  profiles: "local,default"
+---
+datasource:
+  balafharapp:
+    defaultSchema: public
+    driverClassName: org.postgresql.Driver
+    hibernate:
+      dialect: org.hibernate.dialect.PostgreSQL94Dialect
+      format_sql: true
+      hbm2ddl.method: create-drop
+      show_sql: true
+    maxPoolSize: 10
+    password: topgear3000
+    url: "jdbc:postgresql://localhost:5432/apisys"
+    username: postgres
+spring:
+  profiles: prod
